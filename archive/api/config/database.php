@@ -4,7 +4,7 @@ class Database{
     // specify your own database credentials
     private $host = "localhost";
     private $db_name = "authentification";
-    private $username = "root";
+    private $username = "authentification";
     private $password = "";
     public $conn;
  
