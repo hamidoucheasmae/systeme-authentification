@@ -30,7 +30,7 @@ if($stmt->rowCount() > 0){
     
     echo
      "<div class='text-center'><h3>hello $username </h3>
-    <a class='btn btn-danger' href='logout.php'>Log out</a></div>";
+    <a class='btn btn-warning' href='logout.php'>Log out</a></div>";
 
     // header('location:../../admin.php');
 

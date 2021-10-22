@@ -165,3 +165,6 @@ body{
   .foot-lnk{
     text-align:center;
   }
+  .btn {
+background-color: #f67f3d !important;
+  }
