@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Oct 21, 2021 at 11:10 PM
--- Server version: 5.7.32
+-- Host: localhost:3306
+-- Generation Time: Oct 22, 2021 at 08:23 AM
+-- Server version: 5.7.24
 -- PHP Version: 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,16 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `Systeme-Authentification`
+-- Database: `systeme-authentification`
 --
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `user`
---
--- Creation: Oct 21, 2021 at 11:00 PM
--- Last update: Oct 21, 2021 at 11:09 PM
 --
 
 CREATE TABLE `user` (
@@ -36,13 +33,6 @@ CREATE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `password` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES
-(3, 'asmae_mid', 'hamidouche.asmae@gmail.com', '123456');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +52,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
