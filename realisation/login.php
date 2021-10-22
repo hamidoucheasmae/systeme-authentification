@@ -56,7 +56,7 @@ session_start();
 if (isset($_POST['username'])){
 
     $user = new USER();
-//zniti
+
   $user->username = stripslashes($_REQUEST['username']);
   $user->username = mysqli_real_escape_string($conn, $user->username);
   $user->password = stripslashes($_REQUEST['password']);

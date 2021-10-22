@@ -60,8 +60,8 @@
 
  <?php
 
- require('config.php');
- require('class.php');
+ require('../config/database.php');
+ require('../objects/user.php');
 //zniti
 
  $sql = "SELECT  username FROM user ";

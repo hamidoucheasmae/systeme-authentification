@@ -23,12 +23,13 @@ if (isset($_POST['email'])){
 }
 // read the details of user to be edited
 $stmt = $user->login();
-if($stmt->rowCount() > 0){
-    // get retrieved row
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+// $_SESSION['id']    = $row['id'];
+//       $_SESSION['username'] = $user->username;
+//       header("Location: index.php");
 
-    echo "hello $username <a class='btn btn-danger' href='logout.php'>Log out</a>";
-    
+if(!isset($_SESSION["username"])){
+    echo 
+    header("Location: index.php");
 }
 
 else{
