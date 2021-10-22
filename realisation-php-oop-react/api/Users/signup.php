@@ -20,7 +20,8 @@ if($user->signup()){
         echo '<script>
 		alert("Votre compte a été bien créé"); 
 		window.location.href="/../login.html";
-		</script>' ;
+		</script>'
+		 ;
   
 }
 
