@@ -1,8 +1,9 @@
 <?php 
 
 include 'api/Users/login.php';
+// include 'api/config/da'
 
-
+session_start();
 if (isset($_POST['submit'])){
     $username = $_SESSION['username'];
     $pass = $_SESSION['password'];
@@ -23,7 +24,10 @@ if (isset($_POST['submit'])){
 <body>
     
     <?php
-     echo "<div class='text-center'><h3>hello $username </h3> <a class='btn' href='logout.php'>Log out</a></div>";
+
+echo "<h1 class= 'text-white'>Welcome " . $_SESSION['username'] . "</h1>" ; 
+    //  echo "<div class='text-center'><h3>hello $username </h3> <a class='btn' href='logout.php'>Log out</a></div>";
      ?>
+     <a class='btn' href='logout.php'>Log out</a>
 </body>
 </html>

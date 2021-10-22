@@ -3,7 +3,7 @@
 include_once '../config/database.php';
  
 include_once '../objects/user.php';
- 
+session_start();
 $database = new Database();
 $db = $database->getConnection();
  
@@ -15,13 +15,17 @@ $user->password = base64_encode($_POST['password']);
 $user->username = $_POST['username'];
  
 // create the user
+
 if($user->signup()){
     
-        echo '<script>
-		alert("Votre compte a été bien créé"); 
-		window.location.href="/../login.html";
-		</script>'
-		 ;
+        // echo '<script>
+		// alert("Votre compte a été bien créé"); 
+		// window.location.href="/../login.html";
+		// </script>'
+		//  ;
+		
+		
+		header ("location: admin.php");
   
 }
 

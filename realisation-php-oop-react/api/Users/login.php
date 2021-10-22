@@ -17,22 +17,23 @@ $user = new users ($db);
 // $user->username = isset($_POST['username']) ? $_SESSION['username']=$_POST['username'] : die();
 $user->username = isset($_POST['username']) ? $_SESSION['username']=$_POST['username'] : die();
 $user->password = base64_encode(isset($_POST['password']) ? $_SESSION['password']= $_POST['password'] : die());
-
+session_start();
 if (isset($_POST['submit'])){
     $username = $_SESSION['username'];
     $pass = $_SESSION['password'];
+    // header ("location: admin.php");
 }
 // read the details of user to be edited
 $stmt = $user->login();
 if($stmt->rowCount() > 0){
     // get retrieved row
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    echo
-     "<div class='text-center'><h3>hello $username </h3>
-    <a class='btn ' href='logout.php'>Log out</a></div>";
+    // echo "<h1 class= 'text-white'>Welcome " . $_SESSION['username'] . "</h1>" ; 
+    // echo
+    //  "<div class='text-center'><h3>hello $username </h3>
+    // <a class='btn ' href='logout.php'>Log out</a></div>";
 
-    // header('location:../../admin.php');
+    header('location:admin.php');
 
 }
 
