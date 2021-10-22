@@ -5,15 +5,9 @@ class App extends React.Component {
 
 
     render() {
-
-
-
-      
-        return (
      
-    
-          
-   
+        return (
+
 <div className="login-wrap">
   
         <div className="login-html">

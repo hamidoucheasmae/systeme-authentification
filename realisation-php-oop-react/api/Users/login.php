@@ -17,12 +17,14 @@ $user = new users ($db);
 // $user->username = isset($_POST['username']) ? $_SESSION['username']=$_POST['username'] : die();
 $user->username = isset($_POST['username']) ? $_SESSION['username']=$_POST['username'] : die();
 $user->password = base64_encode(isset($_POST['password']) ? $_SESSION['password']= $_POST['password'] : die());
+
 session_start();
 if (isset($_POST['submit'])){
     $username = $_SESSION['username'];
     $pass = $_SESSION['password'];
     // header ("location: admin.php");
 }
+
 // read the details of user to be edited
 $stmt = $user->login();
 if($stmt->rowCount() > 0){

@@ -1,6 +1,8 @@
 <?php 
 
 include 'api/Users/login.php';
+include 'api/Users/signup.php';
+
 // include 'api/config/da'
 
 session_start();
